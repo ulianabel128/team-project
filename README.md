@@ -10,9 +10,7 @@
 
 Носкова Ксения **KseniaNos**
 
-[Техническое задание]
-[Техническое задание]:https://docs.google.com/document/d/1Ovi3ugIIAHhZb8lj82E0mxSsDy0B2iir1Rw2S8hZONE/edit
-
+[Техническое задание](https://docs.google.com/document/d/1Ovi3ugIIAHhZb8lj82E0mxSsDy0B2iir1Rw2S8hZONE/edit)
 
 # **ТЕХНИЧЕСКОЕ ЗАДАНИЕ**
 
