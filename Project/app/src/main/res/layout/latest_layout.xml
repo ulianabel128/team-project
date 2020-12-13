@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
             android:paddingTop="10dp"
-            android:text="Latest Movies"
+            android:text="Уроки"
             android:textColor="#111"
             android:textSize="16dp" />
 

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActionBar toolbar;
     private BottomNavigationView bottomNavigationView;
-    private String[] menus ={"Latest","Favorite","Cart","Profile"};
+    private String[] menus ={"Уроки","Тестирование","Прогресс"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.item4:
-                    toolbar.setTitle(menus[3]);
+                    toolbar.setTitle(menus[2]);
                     fragment = new AccountFragment();
                     loadFragment(fragment);
                     return true;
