@@ -19,6 +19,7 @@ public class FavoriteFragment extends Fragment {
 
     public WebView mWebView;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

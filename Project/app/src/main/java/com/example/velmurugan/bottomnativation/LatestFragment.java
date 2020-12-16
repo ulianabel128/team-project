@@ -1,5 +1,6 @@
 package com.example.velmurugan.bottomnativation;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,23 +23,26 @@ import retrofit2.Response;
 
 public class LatestFragment extends Fragment {
 
-    private ApiService apiService;
-    private RecyclerView shopsRecyclerview;
-    private LatestRecyclerviewAdapter recyclerviewAdapter;
-    private List<Movie> movieList;
+    public WebView mWebView;
 
-    @Nullable
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(container.getContext()).inflate(R.layout.latest_layout,container,false);
-        movieList = new ArrayList<>();
-        shopsRecyclerview = (RecyclerView)view.findViewById(R.id.recycler_view);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        shopsRecyclerview.setLayoutManager(layoutManager);
-        apiService = LatestRepo.getInstance().create(ApiService.class);
-        recyclerviewAdapter = new LatestRecyclerviewAdapter(getContext(), movieList);
-        shopsRecyclerview.setAdapter(recyclerviewAdapter);
-        return view;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View v=inflater.inflate(R.layout.favorite_layout, container, false);
+        mWebView = (WebView) v.findViewById(R.id.activity_main_webview);
+        mWebView.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLScU4Lln87cqRASsgKTBtv-VveIQeEmyg6cF0vi75sO7bEc_iQ/viewform?usp=sf_link");
+
+        // Enable Javascript
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        // Force links and redirects to open in the WebView instead of in a browser
+        mWebView.setWebViewClient(new WebViewClient());
+
+        return v;
     }
+
 
 }
