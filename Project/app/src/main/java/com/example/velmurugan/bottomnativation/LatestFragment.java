@@ -32,7 +32,7 @@ public class LatestFragment extends Fragment {
 
         View v=inflater.inflate(R.layout.favorite_layout, container, false);
         mWebView = (WebView) v.findViewById(R.id.activity_main_webview);
-        mWebView.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLScU4Lln87cqRASsgKTBtv-VveIQeEmyg6cF0vi75sO7bEc_iQ/viewform?usp=sf_link");
+        mWebView.loadUrl("https://yadi.sk/d/OERtFaaj-JGc4w?w=1");
 
         // Enable Javascript
         WebSettings webSettings = mWebView.getSettings();
