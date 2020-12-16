@@ -35,28 +35,7 @@ public class LatestFragment extends Fragment {
         apiService = LatestRepo.getInstance().create(ApiService.class);
         recyclerviewAdapter = new LatestRecyclerviewAdapter(getContext(), movieList);
         shopsRecyclerview.setAdapter(recyclerviewAdapter);
-        loadshopData();
         return view;
     }
 
-
-    private void loadshopData() {
-
-        Call<List<Movie>> listCall = apiService.getshops();
-
-//        listCall.enqueue(new Callback<List<Movie>>() {
-//            @Override
-//            public void onResponse(Call<List<Movie>> call, Response<List<Movie>> response) {
-//                movieList = response.body();
-//                recyclerviewAdapter.loadShops(movieList);
-//                Log.d("Response",response.body().toString());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Movie>> call, Throwable t) {
-//                Log.d("Response",t.toString());
-//
-//            }
-//        });
-    }
 }
